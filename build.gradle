@@ -1,18 +1,99 @@
-subprojects {
-    apply plugin: 'java'
-    apply plugin: 'eclipse'
+buildscript {
+  repositories {
+    maven { url msxfRepo }
+    jcenter()
+    // mavenCentral()
+  }
+  dependencies {
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+  }
+}
 
-    repositories {
-       mavenCentral()
+def buildTime = new Date().format("yyyyMMddHHmm")
+def buildDate = new Date().format("yyyyMMdd")
+
+configurations.all {
+  resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+  // check for updates every build
+  resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+configure(subprojects) { project ->
+  apply from: file("${rootProject.rootDir}/gradle/shared.gradle")
+  apply plugin: 'spring-boot'
+  bootRepackage.enabled = false
+
+  repositories {
+    maven { url msxfRepo }
+    jcenter()
+    // mavenCentral()
+  }
+
+  sourceCompatibility = javaVersion
+  targetCompatibility = javaVersion
+
+  group = 'com.msxf.eyas.mspay'
+  version = '1.0.0'
+
+  configurations {
+    // replaced with jcl-over-slf4j
+    all*.exclude group: 'commons-logging', module: 'commons-logging'
+    // replaced with log4j-over-slf4j
+    all*.exclude group: 'log4j', module: 'log4j'
+    // replaced
+    // all*.exclude group: 'org.jboss.logging', module: 'jboss-logging'
+    // replaced with custom
+    // all*.exclude group: 'org.slf4j', module: 'slf4j-api'
+  }
+
+  eclipse.classpath {
+    containers.remove 'org.eclipse.jdt.launching.JRE_CONTAINER'
+    containers "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-${javaVersion}"
+  }
+
+  dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-aop'
+    compile 'org.springframework.boot:spring-boot-starter-cache'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+
+  
+    compile "com.google.guava:guava:${guava_version}"
+    compile "org.apache.commons:commons-lang3:${commons_lang3_version}"
+   
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+  }
+}
+
+configure(subprojects.findAll { it.name.endsWith('-main') }) {
+  apply plugin: 'war'
+  bootRepackage.enabled = true
+
+  war {
+    baseName = "mspay"
+    classifier = buildTime
+    extension = "zip"
+  }
+
+  springBoot {
+    mainClass = "${project.group}.SiteMain"
+  }
+
+  bootRepackage {
+    mainClass = "${project.group}.SiteMain"
+  }
+
+  configurations {
+    ftpAntTask
+  }
+
+  dependencies {
+    compile project(':mspay-service')
+    ftpAntTask("org.apache.ant:ant-commons-net:1.8.4") {
+      module("commons-net:commons-net:1.4.1") {
+        dependencies "oro:oro:2.0.8:jar"
+      }
     }
+  }
 
-    dependencies {
-        testCompile 'junit:junit:4.8.2'
-    }
-
-    version = '1.0'
-
-    jar {
-        manifest.attributes provider: 'my cool company'
-    }
 }
