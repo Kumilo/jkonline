@@ -1,0 +1,5 @@
+#org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
+#Sun Jun 12 16:34:23 CST 2016
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;jkonline-main;jkonline-service;
+org.springsource.ide.eclipse.gradle.linkedresources=
+org.springsource.ide.eclipse.gradle.rootprojectloc=
