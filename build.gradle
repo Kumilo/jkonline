@@ -32,7 +32,7 @@ configure(subprojects) { project ->
   sourceCompatibility = javaVersion
   targetCompatibility = javaVersion
 
-  group = 'com.msxf.eyas.mspay'
+  group = 'com.hemax.jkt'
   version = '1.0.0'
 
   configurations {
@@ -52,14 +52,11 @@ configure(subprojects) { project ->
   }
 
   dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-aop'
-    compile 'org.springframework.boot:spring-boot-starter-cache'
     compile 'org.springframework.boot:spring-boot-starter-web'
-
   
     compile "com.google.guava:guava:${guava_version}"
     compile "org.apache.commons:commons-lang3:${commons_lang3_version}"
-   
+ 
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
   }
@@ -70,7 +67,7 @@ configure(subprojects.findAll { it.name.endsWith('-main') }) {
   bootRepackage.enabled = true
 
   war {
-    baseName = "mspay"
+    baseName = "jkonline"
     classifier = buildTime
     extension = "zip"
   }
@@ -81,19 +78,6 @@ configure(subprojects.findAll { it.name.endsWith('-main') }) {
 
   bootRepackage {
     mainClass = "${project.group}.SiteMain"
-  }
-
-  configurations {
-    ftpAntTask
-  }
-
-  dependencies {
-    compile project(':mspay-service')
-    ftpAntTask("org.apache.ant:ant-commons-net:1.8.4") {
-      module("commons-net:commons-net:1.4.1") {
-        dependencies "oro:oro:2.0.8:jar"
-      }
-    }
   }
 
 }
