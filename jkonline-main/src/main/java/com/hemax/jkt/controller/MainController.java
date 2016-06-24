@@ -1,15 +1,27 @@
 package com.hemax.jkt.controller;
 
-import org.springframework.stereotype.Controller;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.alibaba.fastjson.JSON;
+import com.hemax.jkt.data.repository.MsgRepository;
+import com.hemax.jkt.domain.Msg;
 
 @RequestMapping("/cqjkt")
-@Controller
+@RestController
 public class MainController {
 	
+	
+	@Autowired
+	MsgRepository msgRepository;
+	
 	@RequestMapping("/home")
-	public void home() {
-		System.out.println("enter home");
+	public String home() {
+		
+		List<Msg> msg = msgRepository.findAll();
+		return JSON.toJSONString(msg);
 	}
 
 }
