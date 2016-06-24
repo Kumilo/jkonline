@@ -1,0 +1,75 @@
+
+server:
+  port: 8040
+
+project:
+  artifactId: jkonline
+  name: jkonline-main
+  description: jkonline-main
+
+info:
+  build:
+    artifact: ${project.artifactId}
+    name: ${project.name}
+    description: ${project.description}
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${db.host}:${db.port}/${db.database}?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    username: ${db.username}
+    password: ${db.password}
+    type: com.alibaba.druid.pool.DruidDataSource
+    maxActive: ${db.maxActive:20}
+    //maxIdle: ${db.maxIdle:2}
+    minIdle: ${db.minIdle:1}
+    testOnBorrow: true
+    testOnReturn: false
+    validationQuery: SELECT 1
+  jpa:
+    database_platform: org.hibernate.dialect.MySQLInnoDBDialect
+    database: MYSQL
+    open_in_view: false
+    show_sql: false
+    hibernate:
+      ddl_auto: none
+      naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
+    properties:
+      hibernate.format_sql: false
+      hibernate.cache.use_second_level_cache: true
+      hibernate.cache.use_query_cache: true
+      hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+      javax.persistence.sharedCache.mode: ENABLE_SELECTIVE
+      
+logging:
+  level:
+    ROOT: WARN
+    com.msxf.eyas: INFO
+  
+counter:
+  flush:
+    interval.ms: 1800000
+    
+---
+spring:
+  profiles: local
+  
+logging:
+  level:
+    org.springframework.boot: INFO
+    org.springframework.web: INFO
+    com.msxf.message: DEBUG
+
+---
+spring:
+  profiles: local
+  thymeleaf:
+    cache: false
+  jpa:
+    show_sql: false
+    properties:
+      hibernate.format_sql: false
+encrypt:
+  file: classpath:config/config.properties
+logging:
+  path: logs
