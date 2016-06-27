@@ -1223,3 +1223,247 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2016-06-24 16:52:57.433  INFO 10852 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8040 (http)
 2016-06-24 16:53:27.328  INFO 10852 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2016-06-24 16:53:27.339  INFO 10852 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2016-06-24 17:00:09.254  INFO 10072 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a807d14: startup date [Fri Jun 24 17:00:09 CST 2016]; root of context hierarchy
+2016-06-24 17:00:10.582  WARN 10072 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method EncryptConfig.propertySourcesPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2016-06-24 17:00:11.009  INFO 10072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8040 (http)
+2016-06-24 17:00:11.082  INFO 10072 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1830 ms
+2016-06-24 17:00:11.323  INFO 10072 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-06-24 17:00:11.328  INFO 10072 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-06-24 17:00:11.329  INFO 10072 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-06-24 17:00:11.329  INFO 10072 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-06-24 17:00:11.329  INFO 10072 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-06-24 17:00:12.184  WARN 10072 --- [main] n.s.ehcache.config.ConfigurationFactory  : No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/gradle-libs/caches/modules-2/files-2.1/net.sf.ehcache/ehcache-core/2.4.3/fd258ef6959f27fb678b04f90139ded4588e2d15/ehcache-core-2.4.3.jar!/ehcache-failsafe.xml
+2016-06-24 17:00:12.227  WARN 10072 --- [main] o.h.c.e.AbstractEhcacheRegionFactory     : HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+2016-06-24 17:00:12.243  WARN 10072 --- [main] o.h.c.e.AbstractEhcacheRegionFactory     : HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+2016-06-24 17:00:12.777  INFO 10072 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a807d14: startup date [Fri Jun 24 17:00:09 CST 2016]; root of context hierarchy
+2016-06-24 17:00:12.829  INFO 10072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/cqjkt/home]}" onto public java.lang.String com.hemax.jkt.controller.MainController.home()
+2016-06-24 17:00:12.833  INFO 10072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-06-24 17:00:12.833  INFO 10072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2016-06-24 17:00:12.857  INFO 10072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-24 17:00:12.858  INFO 10072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-24 17:00:12.892  INFO 10072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-24 17:00:13.182  INFO 10072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8040 (http)
+2016-06-24 17:00:30.754  INFO 10072 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-06-24 17:00:30.765  INFO 10072 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2016-06-24 17:00:30.872 ERROR 10072 --- [http-nio-8040-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Circular view path [home]: would dispatch back to the current handler URL [/cqjkt/home] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)] with root cause
+
+javax.servlet.ServletException: Circular view path [home]: would dispatch back to the current handler URL [/cqjkt/home] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+	at org.springframework.web.servlet.view.InternalResourceView.prepareForRendering(InternalResourceView.java:205) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:145) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1244) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2016-06-26 15:32:09.845  INFO 14684 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50e1cd: startup date [Sun Jun 26 15:32:09 CST 2016]; root of context hierarchy
+2016-06-26 15:32:11.166  WARN 14684 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method EncryptConfig.propertySourcesPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2016-06-26 15:32:11.603  INFO 14684 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8040 (http)
+2016-06-26 15:32:11.683  INFO 14684 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1840 ms
+2016-06-26 15:32:11.927  INFO 14684 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-06-26 15:32:11.930  INFO 14684 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-06-26 15:32:11.931  INFO 14684 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-06-26 15:32:11.931  INFO 14684 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-06-26 15:32:11.931  INFO 14684 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-06-26 15:32:12.801  WARN 14684 --- [main] n.s.ehcache.config.ConfigurationFactory  : No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/gradle-libs/caches/modules-2/files-2.1/net.sf.ehcache/ehcache-core/2.4.3/fd258ef6959f27fb678b04f90139ded4588e2d15/ehcache-core-2.4.3.jar!/ehcache-failsafe.xml
+2016-06-26 15:32:12.843  WARN 14684 --- [main] o.h.c.e.AbstractEhcacheRegionFactory     : HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+2016-06-26 15:32:12.872  WARN 14684 --- [main] o.h.c.e.AbstractEhcacheRegionFactory     : HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+2016-06-26 15:32:13.560  INFO 14684 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50e1cd: startup date [Sun Jun 26 15:32:09 CST 2016]; root of context hierarchy
+2016-06-26 15:32:13.611  INFO 14684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/cqjkt/home]}" onto public java.lang.String com.hemax.jkt.controller.MainController.home()
+2016-06-26 15:32:13.612  INFO 14684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-06-26 15:32:13.613  INFO 14684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2016-06-26 15:32:13.636  INFO 14684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:32:13.636  INFO 14684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:32:13.671  INFO 14684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:32:13.988  INFO 14684 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8040 (http)
+2016-06-26 15:32:29.358  INFO 14684 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-06-26 15:32:29.373  INFO 14684 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2016-06-26 15:32:29.496 ERROR 14684 --- [http-nio-8040-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Circular view path [home]: would dispatch back to the current handler URL [/cqjkt/home] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)] with root cause
+
+javax.servlet.ServletException: Circular view path [home]: would dispatch back to the current handler URL [/cqjkt/home] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+	at org.springframework.web.servlet.view.InternalResourceView.prepareForRendering(InternalResourceView.java:205) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:145) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1244) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2016-06-26 15:33:00.331 ERROR 14684 --- [http-nio-8040-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Circular view path [home]: would dispatch back to the current handler URL [/cqjkt/home] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)] with root cause
+
+javax.servlet.ServletException: Circular view path [home]: would dispatch back to the current handler URL [/cqjkt/home] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+	at org.springframework.web.servlet.view.InternalResourceView.prepareForRendering(InternalResourceView.java:205) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:145) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1244) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217) ~[tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.28.jar:8.0.28]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2016-06-26 15:33:13.375  INFO 11256 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ffe9537: startup date [Sun Jun 26 15:33:13 CST 2016]; root of context hierarchy
+2016-06-26 15:33:14.582  WARN 11256 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method EncryptConfig.propertySourcesPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2016-06-26 15:33:15.009  INFO 11256 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8040 (http)
+2016-06-26 15:33:15.082  INFO 11256 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1709 ms
+2016-06-26 15:33:15.310  INFO 11256 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-06-26 15:33:15.313  INFO 11256 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-06-26 15:33:15.313  INFO 11256 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-06-26 15:33:15.314  INFO 11256 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-06-26 15:33:15.314  INFO 11256 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-06-26 15:33:16.214  WARN 11256 --- [main] n.s.ehcache.config.ConfigurationFactory  : No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/gradle-libs/caches/modules-2/files-2.1/net.sf.ehcache/ehcache-core/2.4.3/fd258ef6959f27fb678b04f90139ded4588e2d15/ehcache-core-2.4.3.jar!/ehcache-failsafe.xml
+2016-06-26 15:33:16.256  WARN 11256 --- [main] o.h.c.e.AbstractEhcacheRegionFactory     : HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+2016-06-26 15:33:16.271  WARN 11256 --- [main] o.h.c.e.AbstractEhcacheRegionFactory     : HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+2016-06-26 15:33:16.817  INFO 11256 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ffe9537: startup date [Sun Jun 26 15:33:13 CST 2016]; root of context hierarchy
+2016-06-26 15:33:16.870  INFO 11256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/cqjkt/home]}" onto public java.lang.String com.hemax.jkt.controller.MainController.home()
+2016-06-26 15:33:16.873  INFO 11256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-06-26 15:33:16.873  INFO 11256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2016-06-26 15:33:16.898  INFO 11256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:33:16.899  INFO 11256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:33:16.933  INFO 11256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:33:17.228  INFO 11256 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8040 (http)
+2016-06-26 15:33:25.765  INFO 11256 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-06-26 15:33:25.777  INFO 11256 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2016-06-26 15:34:17.611  INFO 9940 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cbfe887: startup date [Sun Jun 26 15:34:17 CST 2016]; root of context hierarchy
+2016-06-26 15:34:18.906  WARN 9940 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method EncryptConfig.propertySourcesPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2016-06-26 15:34:19.347  INFO 9940 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8040 (http)
+2016-06-26 15:34:19.420  INFO 9940 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1811 ms
+2016-06-26 15:34:19.658  INFO 9940 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-06-26 15:34:19.661  INFO 9940 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-06-26 15:34:19.662  INFO 9940 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-06-26 15:34:19.662  INFO 9940 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-06-26 15:34:19.662  INFO 9940 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-06-26 15:34:20.519  WARN 9940 --- [main] n.s.ehcache.config.ConfigurationFactory  : No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/gradle-libs/caches/modules-2/files-2.1/net.sf.ehcache/ehcache-core/2.4.3/fd258ef6959f27fb678b04f90139ded4588e2d15/ehcache-core-2.4.3.jar!/ehcache-failsafe.xml
+2016-06-26 15:34:20.560  WARN 9940 --- [main] o.h.c.e.AbstractEhcacheRegionFactory     : HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+2016-06-26 15:34:20.576  WARN 9940 --- [main] o.h.c.e.AbstractEhcacheRegionFactory     : HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+2016-06-26 15:34:21.093  INFO 9940 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cbfe887: startup date [Sun Jun 26 15:34:17 CST 2016]; root of context hierarchy
+2016-06-26 15:34:21.143  INFO 9940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/cqjkt/home]}" onto public java.lang.String com.hemax.jkt.controller.MainController.home()
+2016-06-26 15:34:21.145  INFO 9940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-06-26 15:34:21.145  INFO 9940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2016-06-26 15:34:21.174  INFO 9940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:34:21.174  INFO 9940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:34:21.211  INFO 9940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-26 15:34:21.514  INFO 9940 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8040 (http)
+2016-06-26 15:34:24.218  INFO 9940 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-06-26 15:34:24.229  INFO 9940 --- [http-nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms

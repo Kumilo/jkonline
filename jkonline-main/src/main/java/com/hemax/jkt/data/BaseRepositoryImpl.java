@@ -12,7 +12,7 @@ import javax.persistence.EntityManager;
 import java.io.Serializable;
 
 /**
- * @author hongzheng.liu
+ * created by quan.zhang@msxf.com
  */
 @NoRepositoryBean
 public class BaseRepositoryImpl<T, ID extends Serializable> extends QueryDslJpaRepository<T, ID> implements BaseRepository<T, ID> {

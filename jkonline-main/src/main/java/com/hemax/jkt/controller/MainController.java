@@ -3,14 +3,13 @@ package com.hemax.jkt.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.alibaba.fastjson.JSON;
 import com.hemax.jkt.data.repository.MsgRepository;
 import com.hemax.jkt.domain.Msg;
 
 @RequestMapping("/cqjkt")
-@RestController
+@Controller
 public class MainController {
 	
 	
@@ -21,7 +20,8 @@ public class MainController {
 	public String home() {
 		
 		List<Msg> msg = msgRepository.findAll();
-		return JSON.toJSONString(msg);
+		System.out.println(msg.size());
+		return "hello";
 	}
 
 }
