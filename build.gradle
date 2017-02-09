@@ -56,6 +56,7 @@ configure(subprojects) { project ->
 	compile 'org.springframework.boot:spring-boot-configuration-processor'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
   
     compile "com.alibaba:druid:${druid_version}"
 	compile "com.alibaba:fastjson:${fastjson_version}"
@@ -68,7 +69,7 @@ configure(subprojects) { project ->
     
 	compile "com.mysema.querydsl:querydsl-jpa:${querydsl_version}"
 	compile "com.mysema.querydsl:querydsl-sql:${querydsl_version}"
-	
+	compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1"
 	
     testCompile 'org.springframework.boot:spring-boot-starter-test'
   }
