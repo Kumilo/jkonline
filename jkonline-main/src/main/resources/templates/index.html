@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bootstrap 101 Template</title>
+    <link href="/jkstatic/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+  
+  <div style ="width:99%;margin:0 auto;">
+	  <div class="center-block" style="padding:20px 0px;">
+	    <img class="img-circle center-block" src="/jkstatic/image/logo.jpg" />
+	  </div>
+	  
+	  <div class="center-block">
+	  	<form class="form-inline" action="/jk/login" method="post">
+		  <div class="form-group">
+		    <label class="sr-only" for="exampleInputAmount"></label>
+		    <div class="input-group">
+		      <div class="input-group-addon">姓名：</div>
+		      <input name="name" type="text" class="form-control" id="exampleInputAmount" placeholder="name"/>
+		      <div class="input-group-addon"></div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="sr-only" for="exampleInputAmount"></label>
+		    <div class="input-group">
+		      <div class="input-group-addon">电话：</div>
+		      <input name="phone" type="password" class="form-control" id="exampleInputAmount" placeholder="phone number"/>
+		      <div class="input-group-addon"></div>
+		    </div>
+		  </div>
+		  <div th:text="${message}"></div> 
+		  <div class="center-block">
+		  	<button type="submit" class="btn btn-primary btn-block">登录</button>
+		  </div>
+		</form>
+	  </div>
+	  <hr/>
+	  <div class="panel panel-default">
+	  	<div class="panel-heading">公告信息:<a href="#" class="alert-link">（学员自主查询）</a></div>
+	  	<div class="panel-body">
+	              Bootstrap中文网联合又拍云存储共同推出了开放CDN服务 - BootCDN，我们对广泛的前端开源库提供了稳定的存储和带宽的支持，例如Bootstrap、jQuery等。
+	    </div>
+	    <div class="center-block" style="padding:20px 0px;">
+	    	<img class="img-circle center-block" src="/jkstatic/image/footer.jpg" />
+	 	</div>
+      </div>
+			
+	
+	
+	</div>
+	<script src="/jkstatic/js/jquery-3.2.0.min.js"></script>
+    <script src="/jkstatic/js/bootstrap.min.js"></script>
+  </body>
+</html>

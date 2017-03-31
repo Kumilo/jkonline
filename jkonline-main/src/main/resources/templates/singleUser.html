@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bootstrap 101 Template</title>
+    <link href="/jkstatic/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+  
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="myModalLabel">学员信息</h4>
+		</div>
+		
+		<div class="modal-body">
+			<p class="text-primary" th:text="'姓名：'+${xueyuan.name}"></p>
+			<p class="text-primary" th:text="'年龄：'+${xueyuan.age}"></p>
+			<p  th:switch="${xueyuan.sex}">
+					<p class="text-primary" th:case="1">性别：男</p>
+					<p class="text-primary" th:case="0">性别：女</p>
+			</p>
+			<p  th:switch="${xueyuan.step}">
+					<p class="text-primary" th:case="1">科目：科1待考</p>
+					<p class="text-primary" th:case="2">科目：科2待考</p>
+					<p class="text-primary" th:case="3">科目：科3待考</p>
+					<p class="text-primary" th:case="4">科目：科4待考</p>
+					<p class="text-primary" th:case="5">科目：已结业</p>
+			</p>
+			<p class="text-primary" th:text="'电话号码：'+${xueyuan.phone}"></p>
+			<p class="text-primary" th:text="'身份证号：'+${xueyuan.cert}"></p>
+			<p class="text-primary" th:text="'备注：'+${xueyuan.memo}"></p>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		</div>
+	</div>
+
+
+	<script src="/jkstatic/js/jquery-3.2.0.min.js"></script>
+	
+	<script src="/jkstatic/js/bootstrap.min.js"></script>
+</body>
+</html>

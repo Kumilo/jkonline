@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bootstrap 101 Template</title>
+    <link href="/jkstatic/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">添加学员信息</h3>
+		</div>
+		<div class="panel-body">
+			<div>
+				<form id="addXueyuanForm" class="form-inline" action="/jk/add" method="post">
+					<div class="modal-body">
+						
+						<div class="form-group">
+							<input class="form-control  input-sm" id="name" name="name" placeholder="请求输入姓名" />
+						</div>
+						<div class="form-group">
+							<input class="form-control input-sm" id="cert" name="cert" placeholder="请输入身份证号" />
+						</div>
+						<div class="form-group">
+							<input class="form-control input-sm" id="phone" name="phone" placeholder="请输入电话号码" />
+						</div>
+
+						<div class="form-group">
+							<input class="form-control input-sm" id="age" name="age" placeholder="请输入年龄" />
+						</div>
+						<div class="form-group">
+							<select class="form-control" id="step" name="step">
+								<option value="1">科1待考</option>
+								<option value="2">科2待考</option>
+								<option value="3">科3待考</option>
+								<option value="4">科4待考</option>
+								<option value="5">已结业</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<select class="form-control" id="sex" name="sex">
+								<option value="1">男</option>
+								<option value="0">女</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<textarea class="form-control" rows="3" id="memo" name="memo" placeholder="备注信息"></textarea>
+						</div>
+
+
+					</div>
+					<div class="modal-footer">
+						<a type="button" class="btn btn-default" href="javascript:history.go(-1);">返回</a>
+						<button type="button" class="btn btn-primary" id="submitAddXuyuan">保存学员信息</button>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+	<script src="/jkstatic/js/jquery-3.2.0.min.js"></script>
+	<script src="/jkstatic/js/business.js"></script>
+	<script src="/jkstatic/js/bootstrap.min.js"></script>
+</body>
+</html>

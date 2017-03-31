@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bootstrap 101 Template</title>
+    <link href="/jkstatic/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">更新学员信息</h3>
+		</div>
+		<div class="panel-body">
+			<div>
+				<form id="updateXueyuanForm" class="form-inline" action="/jk/update" method="post">
+					<div class="modal-body">
+						<div class="form-group sr-only">
+							<input th:value="${xueyuan.id}" class="form-control input-sm" id="id_update" name="id" readonly="readonly" />
+						</div>
+						<div class="form-group">
+							<input th:value="${xueyuan.name}" class="form-control  input-sm" id="name_update" name="name" placeholder="请求输入姓名" readonly="readonly" />
+						</div>
+						<div class="form-group">
+							<input th:value="${xueyuan.cert}" class="form-control input-sm" id="cert_update" name="cert" placeholder="请输入身份证号" readonly="readonly" />
+						</div>
+						<div class="form-group">
+							<input th:value="${xueyuan.phone}" class="form-control input-sm" id="phone_update" name="phone" placeholder="请输入电话号码" readonly="readonly" />
+						</div>
+
+						<div class="form-group">
+							<input th:value="${xueyuan.age}" class="form-control input-sm" id="age_update" name="age" placeholder="请输入年龄" readonly="readonly" />
+						</div>
+						<div class="form-group">
+							<select class="form-control" id="step_update" name="step" th:feild="${xueyuan.step}">
+								<option th:value="1" th:selected="${xueyuan.step==1}">科1待考</option>
+								<option th:value="2" th:selected="${xueyuan.step==2}">科2待考</option>
+								<option th:value="3" th:selected="${xueyuan.step==3}">科3待考</option>
+								<option th:value="4" th:selected="${xueyuan.step==4}">科4待考</option>
+								<option th:value="5" th:selected="${xueyuan.step==5}">已结业</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<select class="form-control" id="sex_update" name="sex" readonly="readonly" >
+								<option th:value="${xueyuan.sex}" th:text="${xueyuan.sex}==1?'男':'女'"></option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<textarea class="form-control" rows="3" id="memo_update" name="memo" th:text="${xueyuan.memo}"></textarea>
+						</div>
+
+
+					</div>
+					
+					<div class="modal-footer">
+						<a type="button" class="btn btn-default" href="/jk/users">返回</a>
+						<button type="button" class="btn btn-primary" id="updateAddXuyuan">保存学员信息</button>
+						<div id="tips"></div>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+	<script src="/jkstatic/js/jquery-3.2.0.min.js"></script>
+	<script src="/jkstatic/js/business.js"></script>
+	<script src="/jkstatic/js/bootstrap.min.js"></script>
+</body>
+</html>

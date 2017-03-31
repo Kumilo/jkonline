@@ -1,18 +1,103 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Bootstrap 101 Template</title>
-    <link href="/jkstatic/css/bootstrap.min.css" rel="stylesheet"/>
-  </head>
-  <body>
-  
-  	<div>user.jhtm</div>
-	
-	
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bootstrap 101 Template</title>
+<link href="/jkstatic/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="panel">
+		<div class="panel-body  panel-info">
+			<div>
+				<form class="form-inline" action="/jk/users">
+
+					<div class="form-group">
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon" id="sizing-addon1">姓名：</span> <input type="text" name="name" class="form-control" placeholder="Username Or phone" aria-describedby="sizing-addon1" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon" id="sizing-addon1">科目：</span> 
+							<select class="form-control" name="step">
+								<option value="0">--默认--</option>
+								<option value="1">科1待考</option>
+								<option value="2">科2待考</option>
+								<option value="3">科3待考</option>
+								<option value="4">科4待考</option>
+								<option value="5">已结业</option>
+							</select>
+
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success btn-block col-sm-4">Search</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<table class="table">
+			<tr class="info" >
+				<th class="sr-only">ID</th>
+				<th>姓名</th>
+				<th>电话</th>
+				<th>科目</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr th:each="xueYuan,xueYuanStat : ${xueyuans}">
+				<th th:text="${xueYuan.id}" class="sr-only"></th>
+				<th th:text="${xueYuan.name}"></th>
+				<th th:text="${xueYuan.phone}"></th>
+				<th th:switch="${xueYuan.step}">
+					<p th:case="1">科1待考</p>
+					<p th:case="2">科2待考</p>
+					<p th:case="3">科3待考</p>
+					<p th:case="4">科4待考</p>
+					<p th:case="5">已结业</p>
+				</th>
+				<th><a th:href="${'/jk/query?id='+xueYuan.id}" data-toggle="modal" data-target="#myModal"><img class="img-responsive center-block" src="/jkstatic/image/view.jpg" /></a></th>
+				<th><a th:href="${'/jk/updateQuery?id='+xueYuan.id}"><img class="img-responsive center-block" src="/jkstatic/image/edit.jpg" /></a></th>
+			</tr>
+
+		</table>
+
+	</div>
+
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">学员信息</h4>
+				</div>
+				<div class="modal-body">
+					<p class="text-primary">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：张权</p>
+					<p class="text-primary">年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：29</p>
+					<p class="text-primary">电话号码：13527566525</p>
+					<p class="text-primary">身份证号：500235198806281835</p>
+					<p class="text-primary">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：男</p>
+					<p class="text-primary">科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：科2待考</p>
+					<p class="text-warning">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：Conveying meaning to assistive technologies</p>
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+	</div>
+
 	<script src="/jkstatic/js/jquery-3.2.0.min.js"></script>
-    <script src="/jkstatic/js/bootstrap.min.js"></script>
-  </body>
+	<script src="/jkstatic/js/bootstrap.min.js"></script>
+	<script src="/jkstatic/js/business.js"></script>
+</body>
 </html>

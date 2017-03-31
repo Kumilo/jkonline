@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bootstrap 101 Template</title>
+    <link href="/jkstatic/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+  
+  	<div class="alert alert-success" th:text="'欢迎您:'+${name}"></div>
+	<div style="width: 99%; margin: 0 auto;">
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img class="img-circle center-block"
+						src="/jkstatic/image/advtise.jpg" />
+					<div class="caption">
+						<h3>Thumbnail label</h3>
+						<p>Cras justo odio, dapibus ac facilisis in, egestas eget
+							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
+							dolor id nibh ultricies vehicula ut id elit.</p>
+						<p>
+							<a href="/jk/users" class="btn btn-primary" role="button">查询学员信息</a> 
+							<a href="/jk/addPage" class="btn btn-default"  role="button">添加学员</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">驾考新规</h3>
+			</div>
+			<div class="panel-body">
+				<ul class="list-group">
+				  <li class="list-group-item">Cras justo odio</li>
+				  <li class="list-group-item">Dapibus ac facilisis in</li>
+				  <li class="list-group-item">Morbi leo risus</li>
+				  <li class="list-group-item">Porta ac consectetur ac</li>
+				  <li class="list-group-item">Vestibulum at eros</li>
+				</ul>
+			</div>
+		</div>
+
+
+	</div>
+
+	<script src="/jkstatic/js/jquery-3.2.0.min.js"></script>
+	<script src="/jkstatic/js/business.js"></script>
+    <script src="/jkstatic/js/bootstrap.min.js"></script>
+  </body>
+</html>
